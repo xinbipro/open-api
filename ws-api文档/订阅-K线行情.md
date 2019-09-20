@@ -1,4 +1,4 @@
-### url:wss://ws.***.com/kline-api/ws(Àý)
+### url:wss://ws.xinbipro.com/kline-api/ws(Àý)
 
 ## ¶©ÔÄ-KÏßÐÐÇé
 

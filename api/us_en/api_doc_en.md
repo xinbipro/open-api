@@ -1,6 +1,6 @@
 #  Exchange-official-API-docs
 
-#### Official Documentation for the Exchange APIs and Streams([简体中文版文档](https://github.com/exchange-doc/api/blob/master/api/zh_cn/api_doc_cn.md))
+#### Official Documentation for the Exchange APIs and Streams([简体中文版文档](https://github.com/xinbipro/open-api/blob/master/api/zh_cn/api_doc_cn.md))
 - [Introduction](#Introduction)
 - [Getting Started](#startToUse)
 - [Encrypted Verification of API](#a1)
@@ -17,7 +17,7 @@
         - [Numbers](#b3)
         - [Rate Limits REST API](#b4)
 - [Spot API Reference](#b5)
-  - [open-api](#b6) ([Api Demo](https://github.com/exchange-doc/api/blob/master/demo/demo.txt))
+  - [open-api](#b6) ([Api Demo](https://github.com/xinbipro/open-api/blob/master/demo/demo.txt))
     -   [Balance of the assets](#1)
     -	[Acquire full delegation](#2)
     -	[Obtain all transaction records](#3)
@@ -50,7 +50,7 @@
 
 # <span id="Introduction">Introduction</span>
 
-Welcome to [Exchange](https://www.Exchange.com/index) API document for developers.
+Welcome to [Exchange](https://www.xinbipro.com/index) API document for developers.
 
 This file provides the related API application introduction. Open-API includes the port to acquire balance, all orders ,and all transaction record. Ws-API response for the port of K line functions.
 
@@ -72,7 +72,7 @@ Developers are recommended to use REST API to proceed spot trading and withdrawa
 
 ## <span id="a2">Generate an API Key</span>
 
-Before signing any request, you must generate an API key via [Exchange’s official website ](https://www.Exchange.com/index)【User Center】-【API】. After generating the key, there are three things you must bear in mind:
+Before signing any request, you must generate an API key via [Exchange’s official website ](https://www.xinbipro.com/index)【User Center】-【API】. After generating the key, there are three things you must bear in mind:
 
 - API Key
  
@@ -90,7 +90,7 @@ All REST requests must include the following headings:
 
 ## <span id="a4">Signature</span>
 Generate a string to be signed
-    -   [open-api Demo](https://github.com/exchange-doc/api/blob/master/demo/demo.java)
+    -   [open-api Demo](https://github.com/xinbipro/open-api/blob/master/demo/demo.java)
     
 1、Sort the parameters in ascending order of their parameter names in lexicographic order
 
@@ -111,7 +111,7 @@ sign=md5(api_key1234567time12312312312137789654)
 
 ## <span id="a6">Request Process</span>
 
-The root URL for REST access：``` https://api.Exchange.com ```
+The root URL for REST access：``` https://api.xinbipro.com ```
 
 ###  <span id="a7">Request</span>
 All requests are based on Https protocol, contentType in the request header must be uniformly set as: ‘application/x-www-form-urlencoded’.
@@ -1432,7 +1432,7 @@ public class WsTest {
     public static void main(String[] args) {
         try {
 //wsurl 
-            String url = "wss://ws.Exchange.com/kline-api/ws";
+            String url = "wss://ws.xinbipro.com/kline-api/ws";
 //Historical data request parameters 
             String reqParam = "{"event":"req","params":{"channel":"market_btcusdt_trade_ticker","cb_id":"btcusdt","top":150}}";
 //Subscription parameters 
@@ -1444,7 +1444,7 @@ public class WsTest {
 //Subscribe to real-time data 
             wsc.send(subParam);
 
-//Thread does not end, waiting for new messages，www.Exchange.com Generally, a new deal will return in about a minute
+//Thread does not end, waiting for new messages，www.xinbipro.com Generally, a new deal will return in about a minute
             while (true) {
                 Thread.sleep(1000);
             }
